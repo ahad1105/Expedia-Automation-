@@ -1,0 +1,21 @@
+package POM;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class runnnerPayment {
+
+	public static void main(String[] args) {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Desktop\\Sleenium\\chromedriver_win32\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://www.expedia.co.in/Checkout/V1/HotelCheckout?tripid=04d31faa-150f-518b-83ca-c60f756dd094&c=5b7fda36-bd04-454a-a09a-b2e9d3541f05&swpApplied=false");
+		
+	payment pay = new payment(driver);
+		
+		
+		pay.completePayment("Ahad Khan","8291729433","123456776007006",2,4,"234","ahad70429@gmail.com","abcd1234","abcd1234");
+		
+
+	}
+
+}
